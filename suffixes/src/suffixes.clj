@@ -5,9 +5,9 @@
   (loop [res []
          x xs]
     (if (empty? x)
-      (conj res x)
+      res
       (recur
-       (into res [x])
+       (conj res x)
        (subvec x 1)))))
 
 (comment
