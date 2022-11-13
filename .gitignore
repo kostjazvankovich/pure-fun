@@ -1,0 +1,4 @@
+*.clj~
+*.edn~
+/suffixes/.cpcache/
+/suffixes/.nrepl-port
