@@ -2,3 +2,5 @@
 *.edn~
 /suffixes/.cpcache/
 /suffixes/.nrepl-port
+/bst/.cpcache/
+/bst/.nrepl-port
