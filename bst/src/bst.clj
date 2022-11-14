@@ -24,6 +24,7 @@
               :right {:data 10
                       :right {:data 14
                               :left {:data 13}}}}]
-    (member 61 tree)
+    (member 14 tree)
     )
+
   )
