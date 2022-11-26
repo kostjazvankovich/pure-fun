@@ -13,6 +13,18 @@
           (> x y) (recur right)
           :else true)))))
 
+(defn insert
+  [x tree]
+  (let [y (:data tree)
+        left (:left tree)
+        right (:right tree)]
+    (if (empty? tree)
+      {:data x}
+      (cond
+        (< x y) {:data y :left (insert x left) :right right }
+        (> x y) {:data y :left left :right (insert x right)}
+        :else tree))))
+
 (comment
 
   (let [tree {:data 8
@@ -23,8 +35,8 @@
                              :right {:data 7}}}
               :right {:data 10
                       :right {:data 14
-                              :left {:data 13}}}}]
-    (member 14 tree)
+                              :left {:data 13}}}}
+        x 2]
+    (member x (insert x tree))
     )
-
   )
